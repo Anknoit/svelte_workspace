@@ -1,0 +1,19 @@
+1. svelet has a router that updates a UI when link is clicked
+2. Sveltkit comprises of all the backstuff that makes svelte dev follow efficient an dbest practices while building apps (build optimization to lead minimal required code, offline support, preloading pages, SSR for preloading pages, etc)
+3. Hot Module Replacement (HMR)- reflect changes instanty to browser
+4. Creating a project
+>> npx sv create <app_name>
+>> cd app_name
+>> npm run dev 
+
+5.Each page of the app is a svelte component 
+6. Create new page by adding files in src/route - which wil be server rendered to take customer to the app asap, then client side server takes over 
+>> The pages that we create in src/routes (ex. about.svelte) will be accessed in url @ www.example.com/about this page inituitally will be rendered by Server (SSR - Server Side Rendering) - which will render the whole HTMl page in serveer and then send it to client's browser after which sveltekit will transition to client side server(Known as HYDRATION) for the remaing actions like clicking and navigating that happens within the app through js in the browser without having to load the page again and again - Such apps are called Transitional apps
+
+7. Know types of projects that can be build using svelte
+8. Not typicall used for Multi_page Applications
+9. If using Svelte as Frontend and Different lang as backend (Go, php, java etc...) - Deploy svelte Frontend separately from backend using 'adapter-node' or a serverless adapter
+..adpater node - for different front and backend, my own server, container(docker)
+10. Serverless app - adapters such as "adapter-vercel" adn "adapter-netlify" offers an edge option to support edge rendering to improve latency 
+11. Tauri for mob apps, an desktop apps (electron as well)
+12. Static Folder- consists of files to be served as is - robo.txt, favicon etc
